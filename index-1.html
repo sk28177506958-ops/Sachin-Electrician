@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sachin Electrician | Home Service</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;background:#f4f7fb;color:#222}
+header{background:#111827;color:white;text-align:center;padding:28px 15px}
+header h1{margin:0 0 8px;font-size:32px}
+header p{margin:6px 0}
+.badge{display:inline-block;background:#f59e0b;color:#111;padding:9px 15px;border-radius:20px;font-weight:bold}
+.container{max-width:900px;margin:auto;padding:20px}
+.card{background:white;border-radius:16px;padding:22px;margin:18px 0;box-shadow:0 5px 18px #0001}
+h2{color:#111827}
+.services{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px}
+.service{padding:16px;background:#eef6ff;border-radius:12px}
+.buttons{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
+.btn{display:inline-block;padding:14px 20px;border-radius:10px;text-decoration:none;font-weight:bold;text-align:center;border:0;cursor:pointer}
+.call{background:#16a34a;color:white}
+.whatsapp{background:#25D366;color:white}
+form input,form textarea{width:100%;padding:13px;margin:7px 0;border:1px solid #ccc;border-radius:9px;font-size:16px}
+.submit{width:100%;background:#25D366;color:white;font-size:17px}
+footer{background:#111827;color:white;text-align:center;padding:20px;margin-top:25px}
+.small{font-size:14px;color:#666}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>⚡ Sachin Electrician</h1>
+  <p>Fast & Reliable Electrician Home Service</p>
+  <span class="badge">Home Service Starting ₹150</span>
+</header>
+
+<div class="container">
+
+  <div class="card">
+    <h2>📞 Contact Now</h2>
+    <p>Electrician service ke liye call ya WhatsApp karein.</p>
+    <div class="buttons">
+      <a class="btn call" href="tel:+919511479414">📞 Call Now</a>
+      <a class="btn whatsapp" href="https://wa.me/919511479414" target="_blank">💬 WhatsApp</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>🔧 Our Services</h2>
+    <div class="services">
+      <div class="service">💡 Light / Bulb Fitting</div>
+      <div class="service">🔌 Switch & Socket Repair</div>
+      <div class="service">🌀 Fan Installation</div>
+      <div class="service">⚡ Wiring / Fault Check</div>
+      <div class="service">🛡️ MCB / Electrical Work</div>
+      <div class="service">🏠 Home Service</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>📝 Service Request</h2>
+    <p class="small">Form submit karte hi details WhatsApp par khulengi.</p>
+    <form onsubmit="sendWhatsApp(event)">
+      <input id="name" type="text" placeholder="Your Name" required>
+      <input id="location" type="text" placeholder="Your Location" required>
+      <input id="service" type="text" placeholder="Required Service" required>
+      <textarea id="message" rows="4" placeholder="Problem / Details"></textarea>
+      <button class="btn submit" type="submit">💬 Send Request on WhatsApp</button>
+    </form>
+  </div>
+
+  <div class="card">
+    <h2>👨‍🔧 About</h2>
+    <p>Sachin Electrician — reliable electrician home service. Home service starting from ₹150.</p>
+  </div>
+
+</div>
+
+<footer>
+  © 2026 Sachin Electrician | Call: 9511479414
+</footer>
+
+<script>
+function sendWhatsApp(event) {
+  event.preventDefault();
+
+  const name = document.getElementById("name").value;
+  const location = document.getElementById("location").value;
+  const service = document.getElementById("service").value;
+  const message = document.getElementById("message").value;
+
+  const text =
+    "🔧 *Sachin Electrician Service Request*\n\n" +
+    "👤 Name: " + name + "\n" +
+    "📍 Location: " + location + "\n" +
+    "🛠️ Service: " + service + "\n" +
+    "📝 Details: " + message;
+
+  window.open("https://wa.me/919511479414?text=" + encodeURIComponent(text), "_blank");
+}
+</script>
+
+</body>
+</html>
