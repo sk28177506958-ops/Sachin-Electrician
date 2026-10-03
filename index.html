@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sachin Electrician | Home Service ₹150</title>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:Arial,sans-serif;background:#f4f7fb;color:#172033}
+    header{background:linear-gradient(135deg,#0757d9,#00a6ff);color:white;text-align:center;padding:28px 15px}
+    header h1{font-size:30px;margin-bottom:8px}
+    header p{font-size:16px}
+    .badge{display:inline-block;background:#fff;color:#0757d9;padding:8px 14px;border-radius:30px;font-weight:bold;margin-top:14px}
+    .container{max-width:900px;margin:auto;padding:18px}
+    .card{background:white;border-radius:18px;padding:22px;margin:16px 0;box-shadow:0 5px 20px #00000012}
+    h2{color:#0757d9;margin-bottom:15px}
+    .services{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+    .service{border:1px solid #e2e8f0;border-radius:14px;padding:16px}
+    .service b{display:block;margin-bottom:7px}
+    .price{color:#0a8f3d;font-weight:bold}
+    .btn{display:block;text-align:center;text-decoration:none;padding:14px;border-radius:12px;font-weight:bold;margin-top:12px}
+    .whatsapp{background:#18b85a;color:white}
+    .call{background:#0757d9;color:white}
+    form input,form textarea{width:100%;padding:13px;margin:7px 0;border:1px solid #ccd5e1;border-radius:10px;font-size:15px}
+    form button{width:100%;padding:14px;border:0;border-radius:12px;background:#0757d9;color:white;font-size:16px;font-weight:bold}
+    footer{text-align:center;background:#101828;color:white;padding:22px;margin-top:25px}
+    small{color:#667085}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>⚡ Sachin Electrician</h1>
+    <p>Fast & Reliable Electrician Home Service</p>
+    <div class="badge">Home Service Starting ₹150</div>
+  </header>
+
+  <div class="container">
+    <section class="card">
+      <h2>🔧 Our Services</h2>
+      <div class="services">
+        <div class="service"><b>💡 Switch & Socket Repair</b><span class="price">Home visit from ₹150</span></div>
+        <div class="service"><b>💡 Light / Bulb Fitting</b><span class="price">Home visit from ₹150</span></div>
+        <div class="service"><b>🌀 Fan Installation</b><span class="price">Contact for price</span></div>
+        <div class="service"><b>⚡ Wiring & Fault Check</b><span class="price">Contact for price</span></div>
+        <div class="service"><b>🔌 MCB / Electrical Work</b><span class="price">Contact for price</span></div>
+        <div class="service"><b>🏠 Emergency Home Service</b><span class="price">Call for availability</span></div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>📲 Book Electrician</h2>
+      <p>WhatsApp par apna naam aur kaam bhejein.</p>
+      <a class="btn whatsapp" href="https://wa.me/91XXXXXXXXXX?text=Namaste%20Sachin%20Electrician%2C%20mujhe%20home%20service%20chahiye." target="_blank">💬 WhatsApp Booking</a>
+      <a class="btn call" href="tel:+91XXXXXXXXXX">📞 Call Now</a>
+      <small style="display:block;margin-top:10px">Note: XXXXXXXXXX ko apne WhatsApp/mobile number se replace karein.</small>
+    </section>
+
+    <section class="card">
+      <h2>📝 Service Request</h2>
+      <form onsubmit="sendRequest(event)">
+        <input id="name" placeholder="Aapka naam" required>
+        <input id="area" placeholder="Area / Address" required>
+        <textarea id="work" rows="4" placeholder="Kaunsa electrical kaam hai?" required></textarea>
+        <button type="submit">WhatsApp par Request Bhejein</button>
+      </form>
+    </section>
+
+    <section class="card">
+      <h2>ℹ️ About</h2>
+      <p>Local electrician home service ke liye booking karein. Service charge ka final amount kaam aur location ke according confirm kiya jayega.</p>
+    </section>
+  </div>
+
+  <footer>
+    <p>© 2026 Sachin Electrician</p>
+    <p>Home Electrical Service</p>
+  </footer>
+
+  <script>
+    function sendRequest(e){
+      e.preventDefault();
+      const name=document.getElementById('name').value;
+      const area=document.getElementById('area').value;
+      const work=document.getElementById('work').value;
+      const msg=`Namaste Sachin Electrician,%0AName: ${encodeURIComponent(name)}%0AArea: ${encodeURIComponent(area)}%0AWork: ${encodeURIComponent(work)}`;
+      window.open('https://wa.me/91XXXXXXXXXX?text='+msg,'_blank');
+    }
+  </script>
+</body>
+</html>
